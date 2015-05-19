@@ -20,29 +20,29 @@
 #include <miiphy.h>
 #include <netdev.h>
 
-#if defined(CONFIG_MX6DL) && defined(CONFIG_MXC_EPDC)
-#include <lcd.h>
-#include <mxc_epdc_fb.h>
-#endif
+//#if defined(CONFIG_MX6DL) && defined(CONFIG_MXC_EPDC)
+//#include <lcd.h>
+//#include <mxc_epdc_fb.h>
+//#endif
 #include <asm/arch/mxc_hdmi.h>
 #include <asm/arch/crm_regs.h>
 #include <linux/fb.h>
 #include <ipu_pixfmt.h>
 #include <asm/io.h>
 #include <asm/arch/sys_proto.h>
-#ifdef CONFIG_SYS_I2C_MXC
-#include <i2c.h>
-#include <asm/imx-common/mxc_i2c.h>
-#endif
-#ifdef CONFIG_CMD_SATA
-#include <asm/imx-common/sata.h>
-#endif
-#ifdef CONFIG_FASTBOOT
-#include <fastboot.h>
-#ifdef CONFIG_ANDROID_RECOVERY
-#include <recovery.h>
-#endif
-#endif /*CONFIG_FASTBOOT*/
+//#ifdef CONFIG_SYS_I2C_MXC
+//#include <i2c.h>
+//#include <asm/imx-common/mxc_i2c.h>
+//#endif
+//#ifdef CONFIG_CMD_SATA
+//#include <asm/imx-common/sata.h>
+//#endif
+//#ifdef CONFIG_FASTBOOT
+//#include <fastboot.h>
+//#ifdef CONFIG_ANDROID_RECOVERY
+//#include <recovery.h>
+//#endif
+//#endif /*CONFIG_FASTBOOT*/
 
 DECLARE_GLOBAL_DATA_PTR;
 
