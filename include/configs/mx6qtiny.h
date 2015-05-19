@@ -21,6 +21,8 @@
 
 #include "mx6sabre_common.h"
 
+#undef CONFIG_LDO_BYPASS_CHECK //Disable the LDO bypass checking, we don't use it
+
 /* USB Configs */
 #define CONFIG_CMD_USB
 #define CONFIG_USB_EHCI
