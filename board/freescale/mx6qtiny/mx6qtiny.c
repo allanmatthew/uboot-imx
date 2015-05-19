@@ -1278,7 +1278,7 @@ int checkboard(void)
 
 #ifdef CONFIG_IMX_UDC
 iomux_v3_cfg_t const otg_udc_pads[] = {
-	(MX6_PAD_ENET_RX_ER__USB_OTG_ID | MUX_PAD_CTRL(NO_PAD_CTRL)),
+	(MX6_PAD_GPIO_1__USB_OTG_ID | MUX_PAD_CTRL(NO_PAD_CTRL)),
 };
 void udc_pins_setting(void)
 {
@@ -1292,12 +1292,12 @@ void udc_pins_setting(void)
 
 #ifdef CONFIG_USB_EHCI_MX6
 iomux_v3_cfg_t const usb_otg_pads[] = {
-	MX6_PAD_EIM_D22__USB_OTG_PWR | MUX_PAD_CTRL(NO_PAD_CTRL),
-	MX6_PAD_ENET_RX_ER__USB_OTG_ID | MUX_PAD_CTRL(NO_PAD_CTRL),
+	MX6_PAD_KEY_ROW4__USB_OTG_PWR | MUX_PAD_CTRL(NO_PAD_CTRL),
+	MX6_PAD_GPIO_1__USB_OTG_ID | MUX_PAD_CTRL(NO_PAD_CTRL),
 };
 
 iomux_v3_cfg_t const usb_hc1_pads[] = {
-	MX6_PAD_ENET_TXD1__GPIO1_IO29 | MUX_PAD_CTRL(NO_PAD_CTRL),
+	MX6_PAD_GPIO_4__GPIO1_IO04 | MUX_PAD_CTRL(NO_PAD_CTRL),
 };
 
 int board_ehci_hcd_init(int port)
@@ -1328,9 +1328,9 @@ int board_ehci_power(int port, int on)
 		break;
 	case 1:
 		if (on)
-			gpio_direction_output(IMX_GPIO_NR(1, 29), 1);
+			gpio_direction_output(IMX_GPIO_NR(1, 4), 1);
 		else
-			gpio_direction_output(IMX_GPIO_NR(1, 29), 0);
+			gpio_direction_output(IMX_GPIO_NR(1, 4), 0);
 		break;
 	default:
 		printf("MXC USB port %d not yet supported\n", port);
