@@ -6,8 +6,8 @@
  * SPDX-License-Identifier:	GPL-2.0+
  */
 
-#ifndef __MX6QSABRESD_CONFIG_H
-#define __MX6QSABRESD_CONFIG_H
+#ifndef __MX6QTINY_CONFIG_H
+#define __MX6QTINY_CONFIG_H
 
 #include <asm/arch/imx-regs.h>
 #include <asm/imx-common/gpio.h>
@@ -22,6 +22,7 @@
 #include "mx6sabre_common.h"
 
 #undef CONFIG_LDO_BYPASS_CHECK //Disable the LDO bypass checking, we don't use it
+
 
 /* USB Configs */
 #define CONFIG_CMD_USB
@@ -95,4 +96,4 @@
 #endif
 #endif /* CONFIG_SPLASH_SCREEN && CONFIG_MXC_EPDC */
 
-#endif                         /* __MX6QSABRESD_CONFIG_H */
+#endif                         /* __MX6QTINY_CONFIG_H */
